@@ -1,0 +1,279 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Systems">
+      <UniqueIdentifier>{48ffd073-791c-42d0-b283-1d1d32355cb6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Systems\Graphics">
+      <UniqueIdentifier>{2191cadf-889c-4fe6-b11f-cd51bffd588b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Systems\Graphics\Headers">
+      <UniqueIdentifier>{90b7c844-8346-490c-ab54-242b8f3cc127}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Systems\Graphics\Source">
+      <UniqueIdentifier>{047a00b2-f830-4495-8d8b-ef15d502796d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Systems\Input">
+      <UniqueIdentifier>{deb1dd7f-2f35-4a1b-b087-f89e27f7f1ab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Systems\Input\Headers">
+      <UniqueIdentifier>{5047da3b-7dd9-4f22-90f2-776bbd8fa5a7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Systems\Input\Source">
+      <UniqueIdentifier>{5112ba97-bef7-4ad2-9d56-ba628b9c442d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Systems\Graphics\Shaders">
+      <UniqueIdentifier>{e4d99e21-9f67-45d8-be04-307ae8dae21d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Systems\Particles">
+      <UniqueIdentifier>{218e4880-19d5-4ade-98d5-6dc4bea60d98}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Systems\Editor">
+      <UniqueIdentifier>{ff9f6d25-427c-4229-a582-ba66c04c10d0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Systems\ImGui">
+      <UniqueIdentifier>{0606a453-8609-43e5-8ffb-649d94a6b172}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Systems\Particles\ComputeParticles">
+      <UniqueIdentifier>{f2656b67-3402-470c-a35a-72536d10b03f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Systems\Particles\ComputeParticles\Source">
+      <UniqueIdentifier>{717a593c-ce04-4242-ba8d-bb2a9c907b4d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Systems\Particles\ComputeParticles\Headers">
+      <UniqueIdentifier>{3fc80b4a-4bad-4f3a-b310-faddacf783ce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Systems\Particles\ParticleSystem">
+      <UniqueIdentifier>{32cf6727-d651-45a5-96f4-b8fc28994ffa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Systems\Particles\ParticleSystem\Headers">
+      <UniqueIdentifier>{5500b1f2-7ecc-452e-9f2a-65d715a74d9c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Systems\Particles\ParticleSystem\Source">
+      <UniqueIdentifier>{ad2f23d0-2c94-4135-abc3-0c8e9659829a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Systems\Systems.cpp">
+      <Filter>Systems</Filter>
+    </ClCompile>
+    <ClCompile Include="Systems\Input\InputSystem.cpp">
+      <Filter>Systems\Input\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Systems\main.cpp" />
+    <ClCompile Include="Systems\Graphics\LoadShader.cpp">
+      <Filter>Systems\Graphics\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Systems\Graphics\GraphicsSystem.cpp">
+      <Filter>Systems\Graphics\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Systems\Graphics\Context.cpp">
+      <Filter>Systems\Graphics\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Systems\Graphics\ShaderManager.cpp">
+      <Filter>Systems\Graphics\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Systems\Graphics\Camera.cpp">
+      <Filter>Systems\Graphics\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Systems\Graphics\Object.cpp">
+      <Filter>Systems\Graphics\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Systems\Graphics\MeshGenerator.cpp">
+      <Filter>Systems\Graphics\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Systems\Graphics\Mesh.cpp">
+      <Filter>Systems\Graphics\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Systems\Graphics\ObjectManager.cpp">
+      <Filter>Systems\Graphics\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Systems\Graphics\OBJLoader.cpp">
+      <Filter>Systems\Graphics\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Systems\Graphics\Texture.cpp">
+      <Filter>Systems\Graphics\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Systems\Editor\Editor.cpp">
+      <Filter>Systems\Editor</Filter>
+    </ClCompile>
+    <ClCompile Include="Systems\Graphics\Particles\ComputeParticles\ComputeParticleRenderer.cpp">
+      <Filter>Systems\Particles\ComputeParticles\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Systems\Graphics\Particles\ComputeParticles\ComputeShader.cpp">
+      <Filter>Systems\Particles\ComputeParticles\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Systems\Graphics\Particles\ComputeParticles\Shader.cpp">
+      <Filter>Systems\Particles\ComputeParticles\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Systems\Graphics\Particles\NormalParticles\ParticleEffect.cpp">
+      <Filter>Systems\Particles\ParticleSystem\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Systems\Graphics\Particles\NormalParticles\ParticleEmiter.cpp">
+      <Filter>Systems\Particles\ParticleSystem\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Systems\Graphics\Particles\NormalParticles\ParticleGenerator.cpp">
+      <Filter>Systems\Particles\ParticleSystem\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Systems\Graphics\Particles\NormalParticles\ParticleRenderer.cpp">
+      <Filter>Systems\Particles\ParticleSystem\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Systems\Graphics\Particles\NormalParticles\ParticleSystem.cpp">
+      <Filter>Systems\Particles\ParticleSystem\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Systems\Graphics\Particles\NormalParticles\ParticleUpdater.cpp">
+      <Filter>Systems\Particles\ParticleSystem\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Systems\Graphics\Light.cpp">
+      <Filter>Systems\Graphics\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Systems\Graphics\Particles\ComputeParticles\ShaderBufferManager.cpp">
+      <Filter>Systems\Particles\ComputeParticles\Source</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Systems\Graphics\Graphics_Headers.h">
+      <Filter>Systems\Graphics\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Systems\Graphics\GraphicsSystem.h">
+      <Filter>Systems\Graphics\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Systems\Graphics\LoadShader.h">
+      <Filter>Systems\Graphics\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Systems\Systems.h">
+      <Filter>Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="Systems\Input\InputSystem.h">
+      <Filter>Systems\Input\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Systems\System_Headers.h">
+      <Filter>Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="Systems\Graphics\Context.h">
+      <Filter>Systems\Graphics\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Systems\Graphics\Buffer_Manager.h">
+      <Filter>Systems\Graphics\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Systems\Graphics\ShaderManager.h">
+      <Filter>Systems\Graphics\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Systems\Graphics\Math_Headers.h">
+      <Filter>Systems\Graphics\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Systems\Graphics\Camera.h">
+      <Filter>Systems\Graphics\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Systems\Graphics\Object.h">
+      <Filter>Systems\Graphics\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Systems\Graphics\MeshGenerator.h">
+      <Filter>Systems\Graphics\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Systems\Graphics\Mesh.h">
+      <Filter>Systems\Graphics\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Systems\Graphics\ObjectManager.h">
+      <Filter>Systems\Graphics\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Systems\Graphics\OBJLoader.h">
+      <Filter>Systems\Graphics\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="stb_image.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Systems\Graphics\Texture.h">
+      <Filter>Systems\Graphics\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Systems\Editor\Editor.h">
+      <Filter>Systems\Editor</Filter>
+    </ClInclude>
+    <ClInclude Include="Systems\Graphics\Particles\ComputeParticles\ComputeParticleRenderer.h">
+      <Filter>Systems\Particles\ComputeParticles\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Systems\Graphics\Particles\ComputeParticles\ComputeShader.h">
+      <Filter>Systems\Particles\ComputeParticles\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Systems\Graphics\Particles\ComputeParticles\Shader.h">
+      <Filter>Systems\Particles\ComputeParticles\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Systems\Graphics\Particles\NormalParticles\ParticleEffect.h">
+      <Filter>Systems\Particles\ParticleSystem\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Systems\Graphics\Particles\NormalParticles\ParticleEmiter.h">
+      <Filter>Systems\Particles\ParticleSystem\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Systems\Graphics\Particles\NormalParticles\ParticleGenerator.h">
+      <Filter>Systems\Particles\ParticleSystem\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Systems\Graphics\Particles\NormalParticles\ParticleRenderer.h">
+      <Filter>Systems\Particles\ParticleSystem\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Systems\Graphics\Particles\NormalParticles\ParticleSystem.h">
+      <Filter>Systems\Particles\ParticleSystem\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Systems\Graphics\Particles\NormalParticles\ParticleUpdater.h">
+      <Filter>Systems\Particles\ParticleSystem\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Systems\Graphics\Light.h">
+      <Filter>Systems\Graphics\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Systems\Graphics\Particles\ComputeParticles\ShaderBufferManager.h">
+      <Filter>Systems\Particles\ComputeParticles\Headers</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Systems\Graphics\Shaders\ModelFragmentShader.glsl">
+      <Filter>Systems\Graphics\Shaders</Filter>
+    </None>
+    <None Include="Systems\Graphics\Shaders\ModelVertexShader.glsl">
+      <Filter>Systems\Graphics\Shaders</Filter>
+    </None>
+    <None Include="Systems\Graphics\Shaders\SimpleFragmentShader.glsl">
+      <Filter>Systems\Graphics\Shaders</Filter>
+    </None>
+    <None Include="Systems\Graphics\Shaders\SimpleVertexShader.glsl">
+      <Filter>Systems\Graphics\Shaders</Filter>
+    </None>
+    <None Include="Systems\Graphics\Shaders\ParticleVertexShader.glsl">
+      <Filter>Systems\Graphics\Shaders</Filter>
+    </None>
+    <None Include="Systems\Graphics\Shaders\ParticleFragmentShader.glsl">
+      <Filter>Systems\Graphics\Shaders</Filter>
+    </None>
+    <None Include="Systems\Graphics\Shaders\Vertex.vs.glsl">
+      <Filter>Systems\Graphics\Shaders</Filter>
+    </None>
+    <None Include="Systems\Graphics\Shaders\Fragment.frag.glsl">
+      <Filter>Systems\Graphics\Shaders</Filter>
+    </None>
+    <None Include="Systems\Graphics\Shaders\MouseParticleEffect.cs.glsl">
+      <Filter>Systems\Graphics\Shaders</Filter>
+    </None>
+    <None Include="Systems\Graphics\Shaders\PerVertexPhong.fs.glsl">
+      <Filter>Systems\Graphics\Shaders</Filter>
+    </None>
+    <None Include="Systems\Graphics\Shaders\PerVertexPhong.vs.glsl">
+      <Filter>Systems\Graphics\Shaders</Filter>
+    </None>
+    <None Include="Systems\Graphics\Shaders\PerFragmentBlinn.fs.glsl">
+      <Filter>Systems\Graphics\Shaders</Filter>
+    </None>
+    <None Include="Systems\Graphics\Shaders\PerFragmentBlinn.vs.glsl">
+      <Filter>Systems\Graphics\Shaders</Filter>
+    </None>
+  </ItemGroup>
+</Project>

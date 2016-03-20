@@ -1,0 +1,68 @@
+﻿Build started 19/03/2016 18:52:33.
+     1>Project "C:\Users\Gonzalo\Desktop\AI_Project\Graphics_Engine\Graphics_Engine.vcxproj" on node 2 (Build target(s)).
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(381,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (My_Project.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _CRT_SECURE_NO_WARNINGS /D _MBCS /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Systems\Editor\Editor.cpp Systems\Graphics\Camera.cpp Systems\Graphics\Context.cpp Systems\Graphics\GraphicsSystem.cpp Systems\Graphics\Light.cpp Systems\Graphics\LoadShader.cpp Systems\Graphics\Mesh.cpp Systems\Graphics\Object.cpp Systems\Graphics\ObjectManager.cpp Systems\Graphics\OBJLoader.cpp Systems\Graphics\Particles\ComputeParticles\ComputeParticleRenderer.cpp Systems\Graphics\Particles\ComputeParticles\ComputeShader.cpp Systems\Graphics\Particles\ComputeParticles\Shader.cpp Systems\Graphics\Particles\ComputeParticles\ShaderBufferManager.cpp Systems\Graphics\Particles\NormalParticles\ParticleEffect.cpp Systems\Graphics\Particles\NormalParticles\ParticleEmiter.cpp Systems\Graphics\Particles\NormalParticles\ParticleGenerator.cpp Systems\Graphics\Particles\NormalParticles\ParticleRenderer.cpp Systems\Graphics\Particles\NormalParticles\ParticleSystem.cpp Systems\Graphics\Particles\NormalParticles\ParticleUpdater.cpp Systems\Graphics\ShaderManager.cpp Systems\Graphics\MeshGenerator.cpp Systems\Graphics\Texture.cpp Systems\Input\InputSystem.cpp Systems\main.cpp Systems\Systems.cpp
+         Systems.cpp
+         main.cpp
+         InputSystem.cpp
+         Texture.cpp
+         MeshGenerator.cpp
+         ShaderManager.cpp
+         ParticleUpdater.cpp
+         ParticleSystem.cpp
+         ParticleRenderer.cpp
+         ParticleGenerator.cpp
+         ParticleEmiter.cpp
+         ParticleEffect.cpp
+         ShaderBufferManager.cpp
+         Shader.cpp
+         ComputeShader.cpp
+         ComputeParticleRenderer.cpp
+         OBJLoader.cpp
+         ObjectManager.cpp
+         Object.cpp
+         Mesh.cpp
+         Generating Code...
+         Compiling...
+         LoadShader.cpp
+         Light.cpp
+         GraphicsSystem.cpp
+         Context.cpp
+         Camera.cpp
+         Editor.cpp
+         Generating Code...
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Gonzalo\Desktop\AI_Project\Debug\Graphics_Engine.exe" /INCREMENTAL /NOLOGO ImGuid.lib STB.lib opengl32.lib glew32.lib glew32s.lib glfw3.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Gonzalo\Desktop\AI_Project\Debug\Graphics_Engine.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Gonzalo\Desktop\AI_Project\Debug\Graphics_Engine.lib" /MACHINE:X86 /ignore:4099 Debug\Editor.obj
+         Debug\Camera.obj
+         Debug\Context.obj
+         Debug\GraphicsSystem.obj
+         Debug\Light.obj
+         Debug\LoadShader.obj
+         Debug\Mesh.obj
+         Debug\Object.obj
+         Debug\ObjectManager.obj
+         Debug\OBJLoader.obj
+         Debug\ComputeParticleRenderer.obj
+         Debug\ComputeShader.obj
+         Debug\Shader.obj
+         Debug\ShaderBufferManager.obj
+         Debug\ParticleEffect.obj
+         Debug\ParticleEmiter.obj
+         Debug\ParticleGenerator.obj
+         Debug\ParticleRenderer.obj
+         Debug\ParticleSystem.obj
+         Debug\ParticleUpdater.obj
+         Debug\ShaderManager.obj
+         Debug\MeshGenerator.obj
+         Debug\Texture.obj
+         Debug\InputSystem.obj
+         Debug\main.obj
+         Debug\Systems.obj
+     1>LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
+         Graphics_Engine.vcxproj -> C:\Users\Gonzalo\Desktop\AI_Project\Debug\Graphics_Engine.exe
+     1>Done Building Project "C:\Users\Gonzalo\Desktop\AI_Project\Graphics_Engine\Graphics_Engine.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:11.47

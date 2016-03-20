@@ -1,0 +1,51 @@
+﻿Build started 10/7/2015 12:38:25 AM.
+     1>Project "C:\Users\Gonzalo\Desktop\GameEngine\Graphics_Engine\Graphics_Engine\Graphics_Engine.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D _CRT_SECURE_NO_WARNINGS /D _MBCS /D _MBCS /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Systems\Editor\Editor.cpp Systems\Graphics\Camera.cpp Systems\Graphics\Context.cpp Systems\Graphics\GraphicsSystem.cpp Systems\Graphics\LoadShader.cpp Systems\Graphics\Mesh.cpp Systems\Graphics\Object.cpp Systems\Graphics\ObjectManager.cpp Systems\Graphics\OBJLoader.cpp Systems\Graphics\Particles\ParticleEffect.cpp Systems\Graphics\Particles\ParticleEmiter.cpp Systems\Graphics\Particles\ParticleGenerator.cpp Systems\Graphics\Particles\ParticleRenderer.cpp Systems\Graphics\Particles\ParticleSystem.cpp Systems\Graphics\Particles\ParticleUpdater.cpp Systems\Graphics\ShaderManager.cpp Systems\Graphics\MeshGenerator.cpp Systems\Graphics\Texture.cpp Systems\Input\InputSystem.cpp Systems\main.cpp Systems\Systems.cpp
+         Editor.cpp
+     1>c:\users\gonzalo\desktop\gameengine\graphics_engine\graphics_engine\systems\editor\Editor.h(3): fatal error C1083: Cannot open include file: 'imgui/imgui.h': No such file or directory
+         Camera.cpp
+     1>c:\users\gonzalo\desktop\gameengine\graphics_engine\graphics_engine\systems\graphics\Math_Headers.h(5): fatal error C1083: Cannot open include file: 'glm/glm.hpp': No such file or directory
+         Context.cpp
+     1>c:\users\gonzalo\desktop\gameengine\graphics_engine\graphics_engine\systems\graphics\Graphics_Headers.h(5): fatal error C1083: Cannot open include file: 'GL/glew.h': No such file or directory
+         GraphicsSystem.cpp
+     1>c:\users\gonzalo\desktop\gameengine\graphics_engine\graphics_engine\systems\graphics\Graphics_Headers.h(5): fatal error C1083: Cannot open include file: 'GL/glew.h': No such file or directory
+         LoadShader.cpp
+     1>c:\users\gonzalo\desktop\gameengine\graphics_engine\graphics_engine\systems\graphics\Graphics_Headers.h(5): fatal error C1083: Cannot open include file: 'GL/glew.h': No such file or directory
+         Mesh.cpp
+     1>c:\users\gonzalo\desktop\gameengine\graphics_engine\graphics_engine\systems\graphics\Graphics_Headers.h(5): fatal error C1083: Cannot open include file: 'GL/glew.h': No such file or directory
+         Object.cpp
+     1>c:\users\gonzalo\desktop\gameengine\graphics_engine\graphics_engine\systems\graphics\Graphics_Headers.h(5): fatal error C1083: Cannot open include file: 'GL/glew.h': No such file or directory
+         ObjectManager.cpp
+     1>c:\users\gonzalo\desktop\gameengine\graphics_engine\graphics_engine\systems\graphics\Graphics_Headers.h(5): fatal error C1083: Cannot open include file: 'GL/glew.h': No such file or directory
+         OBJLoader.cpp
+     1>c:\users\gonzalo\desktop\gameengine\graphics_engine\graphics_engine\systems\graphics\Math_Headers.h(5): fatal error C1083: Cannot open include file: 'glm/glm.hpp': No such file or directory
+         ParticleEffect.cpp
+     1>c:\users\gonzalo\desktop\gameengine\graphics_engine\graphics_engine\systems\graphics\particles\../Graphics_Headers.h(5): fatal error C1083: Cannot open include file: 'GL/glew.h': No such file or directory
+         ParticleEmiter.cpp
+     1>c:\users\gonzalo\desktop\gameengine\graphics_engine\graphics_engine\systems\graphics\particles\../Graphics_Headers.h(5): fatal error C1083: Cannot open include file: 'GL/glew.h': No such file or directory
+         ParticleGenerator.cpp
+     1>c:\users\gonzalo\desktop\gameengine\graphics_engine\graphics_engine\systems\graphics\particles\../Math_Headers.h(5): fatal error C1083: Cannot open include file: 'glm/glm.hpp': No such file or directory
+         ParticleRenderer.cpp
+     1>c:\users\gonzalo\desktop\gameengine\graphics_engine\graphics_engine\systems\graphics\Graphics_Headers.h(5): fatal error C1083: Cannot open include file: 'GL/glew.h': No such file or directory
+         ParticleSystem.cpp
+     1>c:\users\gonzalo\desktop\gameengine\graphics_engine\graphics_engine\systems\graphics\particles\../Graphics_Headers.h(5): fatal error C1083: Cannot open include file: 'GL/glew.h': No such file or directory
+         ParticleUpdater.cpp
+     1>c:\users\gonzalo\desktop\gameengine\graphics_engine\graphics_engine\systems\graphics\particles\../Math_Headers.h(5): fatal error C1083: Cannot open include file: 'glm/glm.hpp': No such file or directory
+         ShaderManager.cpp
+     1>c:\users\gonzalo\desktop\gameengine\graphics_engine\graphics_engine\systems\graphics\Graphics_Headers.h(5): fatal error C1083: Cannot open include file: 'GL/glew.h': No such file or directory
+         MeshGenerator.cpp
+     1>c:\users\gonzalo\desktop\gameengine\graphics_engine\graphics_engine\systems\graphics\Graphics_Headers.h(5): fatal error C1083: Cannot open include file: 'GL/glew.h': No such file or directory
+         Texture.cpp
+     1>c:\users\gonzalo\desktop\gameengine\graphics_engine\graphics_engine\systems\graphics\Graphics_Headers.h(5): fatal error C1083: Cannot open include file: 'GL/glew.h': No such file or directory
+         InputSystem.cpp
+     1>c:\users\gonzalo\desktop\gameengine\graphics_engine\graphics_engine\systems\input\../Graphics/Graphics_Headers.h(5): fatal error C1083: Cannot open include file: 'GL/glew.h': No such file or directory
+         main.cpp
+     1>c:\users\gonzalo\desktop\gameengine\graphics_engine\graphics_engine\systems\graphics\Graphics_Headers.h(5): fatal error C1083: Cannot open include file: 'GL/glew.h': No such file or directory
+         Compiling...
+         Systems.cpp
+     1>Done Building Project "C:\Users\Gonzalo\Desktop\GameEngine\Graphics_Engine\Graphics_Engine\Graphics_Engine.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:01.02

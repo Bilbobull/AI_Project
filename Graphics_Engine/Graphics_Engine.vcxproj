@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{44508FB9-10FB-4E17-961B-830C363E14E7}</ProjectGuid>
+    <RootNamespace>Graphics_Engine</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>$(ProjectDir)/External_Dependency/include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(ProjectDir)\External_Dependency\lib\x86;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>ImGuid.lib;STB.lib;opengl32.lib;glew32.lib;glew32s.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Console</SubSystem>
+      <AdditionalOptions>/ignore:4099 %(AdditionalOptions)</AdditionalOptions>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>ImGui.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Systems\Editor\Editor.cpp" />
+    <ClCompile Include="Systems\Graphics\Camera.cpp" />
+    <ClCompile Include="Systems\Graphics\Context.cpp" />
+    <ClCompile Include="Systems\Graphics\GraphicsSystem.cpp" />
+    <ClCompile Include="Systems\Graphics\Light.cpp" />
+    <ClCompile Include="Systems\Graphics\LoadShader.cpp" />
+    <ClCompile Include="Systems\Graphics\Mesh.cpp" />
+    <ClCompile Include="Systems\Graphics\Object.cpp" />
+    <ClCompile Include="Systems\Graphics\ObjectManager.cpp" />
+    <ClCompile Include="Systems\Graphics\OBJLoader.cpp" />
+    <ClCompile Include="Systems\Graphics\Particles\ComputeParticles\ComputeParticleRenderer.cpp" />
+    <ClCompile Include="Systems\Graphics\Particles\ComputeParticles\ComputeShader.cpp" />
+    <ClCompile Include="Systems\Graphics\Particles\ComputeParticles\Shader.cpp" />
+    <ClCompile Include="Systems\Graphics\Particles\ComputeParticles\ShaderBufferManager.cpp" />
+    <ClCompile Include="Systems\Graphics\Particles\NormalParticles\ParticleEffect.cpp" />
+    <ClCompile Include="Systems\Graphics\Particles\NormalParticles\ParticleEmiter.cpp" />
+    <ClCompile Include="Systems\Graphics\Particles\NormalParticles\ParticleGenerator.cpp" />
+    <ClCompile Include="Systems\Graphics\Particles\NormalParticles\ParticleRenderer.cpp" />
+    <ClCompile Include="Systems\Graphics\Particles\NormalParticles\ParticleSystem.cpp" />
+    <ClCompile Include="Systems\Graphics\Particles\NormalParticles\ParticleUpdater.cpp" />
+    <ClCompile Include="Systems\Graphics\ShaderManager.cpp" />
+    <ClCompile Include="Systems\Graphics\MeshGenerator.cpp" />
+    <ClCompile Include="Systems\Graphics\Texture.cpp" />
+    <ClCompile Include="Systems\Input\InputSystem.cpp" />
+    <ClCompile Include="Systems\main.cpp" />
+    <ClCompile Include="Systems\Systems.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stb_image.h" />
+    <ClInclude Include="Systems\Editor\Editor.h" />
+    <ClInclude Include="Systems\Graphics\Buffer_Manager.h" />
+    <ClInclude Include="Systems\Graphics\Camera.h" />
+    <ClInclude Include="Systems\Graphics\Context.h" />
+    <ClInclude Include="Systems\Graphics\GraphicsSystem.h" />
+    <ClInclude Include="Systems\Graphics\Graphics_Headers.h" />
+    <ClInclude Include="Systems\Graphics\Light.h" />
+    <ClInclude Include="Systems\Graphics\LoadShader.h" />
+    <ClInclude Include="Systems\Graphics\Math_Headers.h" />
+    <ClInclude Include="Systems\Graphics\Mesh.h" />
+    <ClInclude Include="Systems\Graphics\Object.h" />
+    <ClInclude Include="Systems\Graphics\ObjectManager.h" />
+    <ClInclude Include="Systems\Graphics\OBJLoader.h" />
+    <ClInclude Include="Systems\Graphics\Particles\ComputeParticles\ComputeParticleRenderer.h" />
+    <ClInclude Include="Systems\Graphics\Particles\ComputeParticles\ComputeShader.h" />
+    <ClInclude Include="Systems\Graphics\Particles\ComputeParticles\Shader.h" />
+    <ClInclude Include="Systems\Graphics\Particles\ComputeParticles\ShaderBufferManager.h" />
+    <ClInclude Include="Systems\Graphics\Particles\NormalParticles\ParticleEffect.h" />
+    <ClInclude Include="Systems\Graphics\Particles\NormalParticles\ParticleEmiter.h" />
+    <ClInclude Include="Systems\Graphics\Particles\NormalParticles\ParticleGenerator.h" />
+    <ClInclude Include="Systems\Graphics\Particles\NormalParticles\ParticleRenderer.h" />
+    <ClInclude Include="Systems\Graphics\Particles\NormalParticles\ParticleSystem.h" />
+    <ClInclude Include="Systems\Graphics\Particles\NormalParticles\ParticleUpdater.h" />
+    <ClInclude Include="Systems\Graphics\ShaderManager.h" />
+    <ClInclude Include="Systems\Graphics\MeshGenerator.h" />
+    <ClInclude Include="Systems\Graphics\Texture.h" />
+    <ClInclude Include="Systems\Input\InputSystem.h" />
+    <ClInclude Include="Systems\Systems.h" />
+    <ClInclude Include="Systems\System_Headers.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Systems\Graphics\Shaders\MouseParticleEffect.cs.glsl" />
+    <None Include="Systems\Graphics\Shaders\Fragment.frag.glsl" />
+    <None Include="Systems\Graphics\Shaders\ModelFragmentShader.glsl" />
+    <None Include="Systems\Graphics\Shaders\ModelVertexShader.glsl" />
+    <None Include="Systems\Graphics\Shaders\ParticleFragmentShader.glsl" />
+    <None Include="Systems\Graphics\Shaders\ParticleVertexShader.glsl" />
+    <None Include="Systems\Graphics\Shaders\PerFragmentBlinn.fs.glsl" />
+    <None Include="Systems\Graphics\Shaders\PerFragmentBlinn.vs.glsl" />
+    <None Include="Systems\Graphics\Shaders\PerVertexPhong.fs.glsl" />
+    <None Include="Systems\Graphics\Shaders\PerVertexPhong.vs.glsl" />
+    <None Include="Systems\Graphics\Shaders\SimpleFragmentShader.glsl" />
+    <None Include="Systems\Graphics\Shaders\SimpleVertexShader.glsl" />
+    <None Include="Systems\Graphics\Shaders\Vertex.vs.glsl" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
