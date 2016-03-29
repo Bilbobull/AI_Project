@@ -16,15 +16,6 @@
     <Filter Include="Systems">
       <UniqueIdentifier>{48ffd073-791c-42d0-b283-1d1d32355cb6}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Systems\Graphics">
-      <UniqueIdentifier>{2191cadf-889c-4fe6-b11f-cd51bffd588b}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Systems\Graphics\Headers">
-      <UniqueIdentifier>{90b7c844-8346-490c-ab54-242b8f3cc127}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Systems\Graphics\Source">
-      <UniqueIdentifier>{047a00b2-f830-4495-8d8b-ef15d502796d}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Systems\Input">
       <UniqueIdentifier>{deb1dd7f-2f35-4a1b-b087-f89e27f7f1ab}</UniqueIdentifier>
     </Filter>
@@ -33,9 +24,6 @@
     </Filter>
     <Filter Include="Systems\Input\Source">
       <UniqueIdentifier>{5112ba97-bef7-4ad2-9d56-ba628b9c442d}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Systems\Graphics\Shaders">
-      <UniqueIdentifier>{e4d99e21-9f67-45d8-be04-307ae8dae21d}</UniqueIdentifier>
     </Filter>
     <Filter Include="Systems\Particles">
       <UniqueIdentifier>{218e4880-19d5-4ade-98d5-6dc4bea60d98}</UniqueIdentifier>
@@ -64,6 +52,21 @@
     <Filter Include="Systems\Particles\ParticleSystem\Source">
       <UniqueIdentifier>{ad2f23d0-2c94-4135-abc3-0c8e9659829a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Systems\Editor\Graphics">
+      <UniqueIdentifier>{2191cadf-889c-4fe6-b11f-cd51bffd588b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Systems\Editor\Graphics\Headers">
+      <UniqueIdentifier>{90b7c844-8346-490c-ab54-242b8f3cc127}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Systems\Editor\Graphics\Source">
+      <UniqueIdentifier>{047a00b2-f830-4495-8d8b-ef15d502796d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Systems\Editor\Graphics\Shaders">
+      <UniqueIdentifier>{e4d99e21-9f67-45d8-be04-307ae8dae21d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Systems\Sound">
+      <UniqueIdentifier>{f58361bf-5050-475b-a070-1bcc7040cf0b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Systems\Systems.cpp">
@@ -74,37 +77,37 @@
     </ClCompile>
     <ClCompile Include="Systems\main.cpp" />
     <ClCompile Include="Systems\Graphics\LoadShader.cpp">
-      <Filter>Systems\Graphics\Source</Filter>
+      <Filter>Systems\Editor\Graphics\Source</Filter>
     </ClCompile>
     <ClCompile Include="Systems\Graphics\GraphicsSystem.cpp">
-      <Filter>Systems\Graphics\Source</Filter>
+      <Filter>Systems\Editor\Graphics\Source</Filter>
     </ClCompile>
     <ClCompile Include="Systems\Graphics\Context.cpp">
-      <Filter>Systems\Graphics\Source</Filter>
+      <Filter>Systems\Editor\Graphics\Source</Filter>
     </ClCompile>
     <ClCompile Include="Systems\Graphics\ShaderManager.cpp">
-      <Filter>Systems\Graphics\Source</Filter>
+      <Filter>Systems\Editor\Graphics\Source</Filter>
     </ClCompile>
     <ClCompile Include="Systems\Graphics\Camera.cpp">
-      <Filter>Systems\Graphics\Source</Filter>
+      <Filter>Systems\Editor\Graphics\Source</Filter>
     </ClCompile>
     <ClCompile Include="Systems\Graphics\Object.cpp">
-      <Filter>Systems\Graphics\Source</Filter>
+      <Filter>Systems\Editor\Graphics\Source</Filter>
     </ClCompile>
     <ClCompile Include="Systems\Graphics\MeshGenerator.cpp">
-      <Filter>Systems\Graphics\Source</Filter>
+      <Filter>Systems\Editor\Graphics\Source</Filter>
     </ClCompile>
     <ClCompile Include="Systems\Graphics\Mesh.cpp">
-      <Filter>Systems\Graphics\Source</Filter>
+      <Filter>Systems\Editor\Graphics\Source</Filter>
     </ClCompile>
     <ClCompile Include="Systems\Graphics\ObjectManager.cpp">
-      <Filter>Systems\Graphics\Source</Filter>
+      <Filter>Systems\Editor\Graphics\Source</Filter>
     </ClCompile>
     <ClCompile Include="Systems\Graphics\OBJLoader.cpp">
-      <Filter>Systems\Graphics\Source</Filter>
+      <Filter>Systems\Editor\Graphics\Source</Filter>
     </ClCompile>
     <ClCompile Include="Systems\Graphics\Texture.cpp">
-      <Filter>Systems\Graphics\Source</Filter>
+      <Filter>Systems\Editor\Graphics\Source</Filter>
     </ClCompile>
     <ClCompile Include="Systems\Editor\Editor.cpp">
       <Filter>Systems\Editor</Filter>
@@ -137,21 +140,27 @@
       <Filter>Systems\Particles\ParticleSystem\Source</Filter>
     </ClCompile>
     <ClCompile Include="Systems\Graphics\Light.cpp">
-      <Filter>Systems\Graphics\Source</Filter>
+      <Filter>Systems\Editor\Graphics\Source</Filter>
     </ClCompile>
     <ClCompile Include="Systems\Graphics\Particles\ComputeParticles\ShaderBufferManager.cpp">
       <Filter>Systems\Particles\ComputeParticles\Source</Filter>
     </ClCompile>
+    <ClCompile Include="Systems\Sound\BPM.cpp">
+      <Filter>Systems\Sound</Filter>
+    </ClCompile>
+    <ClCompile Include="Systems\Sound\CounterPointSystem.cpp">
+      <Filter>Systems\Sound</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Systems\Graphics\Graphics_Headers.h">
-      <Filter>Systems\Graphics\Headers</Filter>
+      <Filter>Systems\Editor\Graphics\Headers</Filter>
     </ClInclude>
     <ClInclude Include="Systems\Graphics\GraphicsSystem.h">
-      <Filter>Systems\Graphics\Headers</Filter>
+      <Filter>Systems\Editor\Graphics\Headers</Filter>
     </ClInclude>
     <ClInclude Include="Systems\Graphics\LoadShader.h">
-      <Filter>Systems\Graphics\Headers</Filter>
+      <Filter>Systems\Editor\Graphics\Headers</Filter>
     </ClInclude>
     <ClInclude Include="Systems\Systems.h">
       <Filter>Systems</Filter>
@@ -163,40 +172,40 @@
       <Filter>Systems</Filter>
     </ClInclude>
     <ClInclude Include="Systems\Graphics\Context.h">
-      <Filter>Systems\Graphics\Headers</Filter>
+      <Filter>Systems\Editor\Graphics\Headers</Filter>
     </ClInclude>
     <ClInclude Include="Systems\Graphics\Buffer_Manager.h">
-      <Filter>Systems\Graphics\Headers</Filter>
+      <Filter>Systems\Editor\Graphics\Headers</Filter>
     </ClInclude>
     <ClInclude Include="Systems\Graphics\ShaderManager.h">
-      <Filter>Systems\Graphics\Headers</Filter>
+      <Filter>Systems\Editor\Graphics\Headers</Filter>
     </ClInclude>
     <ClInclude Include="Systems\Graphics\Math_Headers.h">
-      <Filter>Systems\Graphics\Headers</Filter>
+      <Filter>Systems\Editor\Graphics\Headers</Filter>
     </ClInclude>
     <ClInclude Include="Systems\Graphics\Camera.h">
-      <Filter>Systems\Graphics\Headers</Filter>
+      <Filter>Systems\Editor\Graphics\Headers</Filter>
     </ClInclude>
     <ClInclude Include="Systems\Graphics\Object.h">
-      <Filter>Systems\Graphics\Headers</Filter>
+      <Filter>Systems\Editor\Graphics\Headers</Filter>
     </ClInclude>
     <ClInclude Include="Systems\Graphics\MeshGenerator.h">
-      <Filter>Systems\Graphics\Headers</Filter>
+      <Filter>Systems\Editor\Graphics\Headers</Filter>
     </ClInclude>
     <ClInclude Include="Systems\Graphics\Mesh.h">
-      <Filter>Systems\Graphics\Headers</Filter>
+      <Filter>Systems\Editor\Graphics\Headers</Filter>
     </ClInclude>
     <ClInclude Include="Systems\Graphics\ObjectManager.h">
-      <Filter>Systems\Graphics\Headers</Filter>
+      <Filter>Systems\Editor\Graphics\Headers</Filter>
     </ClInclude>
     <ClInclude Include="Systems\Graphics\OBJLoader.h">
-      <Filter>Systems\Graphics\Headers</Filter>
+      <Filter>Systems\Editor\Graphics\Headers</Filter>
     </ClInclude>
     <ClInclude Include="stb_image.h">
       <Filter>Source Files</Filter>
     </ClInclude>
     <ClInclude Include="Systems\Graphics\Texture.h">
-      <Filter>Systems\Graphics\Headers</Filter>
+      <Filter>Systems\Editor\Graphics\Headers</Filter>
     </ClInclude>
     <ClInclude Include="Systems\Editor\Editor.h">
       <Filter>Systems\Editor</Filter>
@@ -229,51 +238,69 @@
       <Filter>Systems\Particles\ParticleSystem\Headers</Filter>
     </ClInclude>
     <ClInclude Include="Systems\Graphics\Light.h">
-      <Filter>Systems\Graphics\Headers</Filter>
+      <Filter>Systems\Editor\Graphics\Headers</Filter>
     </ClInclude>
     <ClInclude Include="Systems\Graphics\Particles\ComputeParticles\ShaderBufferManager.h">
       <Filter>Systems\Particles\ComputeParticles\Headers</Filter>
     </ClInclude>
+    <ClInclude Include="Systems\Sound\BPM.h">
+      <Filter>Systems\Sound</Filter>
+    </ClInclude>
+    <ClInclude Include="Systems\Sound\CounterPointSystem.h">
+      <Filter>Systems\Sound</Filter>
+    </ClInclude>
+    <ClInclude Include="Systems\Sound\KeyScales.h">
+      <Filter>Systems\Sound</Filter>
+    </ClInclude>
+    <ClInclude Include="Systems\Sound\NoteFrequency.h">
+      <Filter>Systems\Sound</Filter>
+    </ClInclude>
+    <ClInclude Include="Systems\Sound\VoiceEnums.h">
+      <Filter>Systems\Sound</Filter>
+    </ClInclude>
+    <ClInclude Include="Systems\Sound\Voices.h">
+      <Filter>Systems\Sound</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="Systems\Graphics\Shaders\ModelFragmentShader.glsl">
-      <Filter>Systems\Graphics\Shaders</Filter>
+      <Filter>Systems\Editor\Graphics\Shaders</Filter>
     </None>
     <None Include="Systems\Graphics\Shaders\ModelVertexShader.glsl">
-      <Filter>Systems\Graphics\Shaders</Filter>
+      <Filter>Systems\Editor\Graphics\Shaders</Filter>
     </None>
     <None Include="Systems\Graphics\Shaders\SimpleFragmentShader.glsl">
-      <Filter>Systems\Graphics\Shaders</Filter>
+      <Filter>Systems\Editor\Graphics\Shaders</Filter>
     </None>
     <None Include="Systems\Graphics\Shaders\SimpleVertexShader.glsl">
-      <Filter>Systems\Graphics\Shaders</Filter>
+      <Filter>Systems\Editor\Graphics\Shaders</Filter>
     </None>
     <None Include="Systems\Graphics\Shaders\ParticleVertexShader.glsl">
-      <Filter>Systems\Graphics\Shaders</Filter>
+      <Filter>Systems\Editor\Graphics\Shaders</Filter>
     </None>
     <None Include="Systems\Graphics\Shaders\ParticleFragmentShader.glsl">
-      <Filter>Systems\Graphics\Shaders</Filter>
+      <Filter>Systems\Editor\Graphics\Shaders</Filter>
     </None>
     <None Include="Systems\Graphics\Shaders\Vertex.vs.glsl">
-      <Filter>Systems\Graphics\Shaders</Filter>
+      <Filter>Systems\Editor\Graphics\Shaders</Filter>
     </None>
     <None Include="Systems\Graphics\Shaders\Fragment.frag.glsl">
-      <Filter>Systems\Graphics\Shaders</Filter>
+      <Filter>Systems\Editor\Graphics\Shaders</Filter>
     </None>
     <None Include="Systems\Graphics\Shaders\MouseParticleEffect.cs.glsl">
-      <Filter>Systems\Graphics\Shaders</Filter>
+      <Filter>Systems\Editor\Graphics\Shaders</Filter>
     </None>
     <None Include="Systems\Graphics\Shaders\PerVertexPhong.fs.glsl">
-      <Filter>Systems\Graphics\Shaders</Filter>
+      <Filter>Systems\Editor\Graphics\Shaders</Filter>
     </None>
     <None Include="Systems\Graphics\Shaders\PerVertexPhong.vs.glsl">
-      <Filter>Systems\Graphics\Shaders</Filter>
+      <Filter>Systems\Editor\Graphics\Shaders</Filter>
     </None>
     <None Include="Systems\Graphics\Shaders\PerFragmentBlinn.fs.glsl">
-      <Filter>Systems\Graphics\Shaders</Filter>
+      <Filter>Systems\Editor\Graphics\Shaders</Filter>
     </None>
     <None Include="Systems\Graphics\Shaders\PerFragmentBlinn.vs.glsl">
-      <Filter>Systems\Graphics\Shaders</Filter>
+      <Filter>Systems\Editor\Graphics\Shaders</Filter>
     </None>
   </ItemGroup>
 </Project>

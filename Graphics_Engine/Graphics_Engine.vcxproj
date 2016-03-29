@@ -99,6 +99,8 @@
     <ClCompile Include="Systems\Graphics\Texture.cpp" />
     <ClCompile Include="Systems\Input\InputSystem.cpp" />
     <ClCompile Include="Systems\main.cpp" />
+    <ClCompile Include="Systems\Sound\BPM.cpp" />
+    <ClCompile Include="Systems\Sound\CounterPointSystem.cpp" />
     <ClCompile Include="Systems\Systems.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -130,6 +132,12 @@
     <ClInclude Include="Systems\Graphics\MeshGenerator.h" />
     <ClInclude Include="Systems\Graphics\Texture.h" />
     <ClInclude Include="Systems\Input\InputSystem.h" />
+    <ClInclude Include="Systems\Sound\BPM.h" />
+    <ClInclude Include="Systems\Sound\CounterPointSystem.h" />
+    <ClInclude Include="Systems\Sound\KeyScales.h" />
+    <ClInclude Include="Systems\Sound\NoteFrequency.h" />
+    <ClInclude Include="Systems\Sound\VoiceEnums.h" />
+    <ClInclude Include="Systems\Sound\Voices.h" />
     <ClInclude Include="Systems\Systems.h" />
     <ClInclude Include="Systems\System_Headers.h" />
   </ItemGroup>
