@@ -9,6 +9,10 @@
 // independent of any functionality implemented here. This implementation is
 // specific to OpenGL 3.3 using FreeGLUT for I/O. This code can easily be
 // adapted to other versions of OpenGL or other input libraries.
+
+//TEMP
+
+
 class ImGuiImpl
 {
 public:
@@ -32,6 +36,7 @@ public:
   static void Motion(float x, float y);
   static void PassiveMotion(float x, float y);
   static void UpdateGuiButtons(void);
+
 
 private:
   static void SpecialUpDown(int key, int x, int y, bool down);

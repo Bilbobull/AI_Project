@@ -1,0 +1,23 @@
+extern float shoft_loud;
+extern int major_minor;
+extern float staccato_legato;
+extern int phrase_length;
+extern int voice_melody;
+extern int time_signature;
+extern int BPM;
+extern float happiness;
+extern float peacefulness;
+extern float heart;
+extern float relax;
+
+extern float* GetSoftness();
+extern int* GetMajor();
+extern float* GetStaccato();
+extern int* GetPhraseLength();
+extern int* GetVoiceMelody();
+extern int* GetTimeSignature();
+extern int* GetBPM();
+extern float* GetHappiness();
+extern float* GetPeacefulness();
+extern float* GetHeartness();
+extern float* GetRelax();

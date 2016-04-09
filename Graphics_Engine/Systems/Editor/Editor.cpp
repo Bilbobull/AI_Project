@@ -7,6 +7,7 @@
 #include "../Graphics/Object.h"
 #include "../Graphics/ObjectManager.h"
 #include <string>
+#include "../Sound/Variables.h"
 
 #define STB_IMAGE_IMPLEMENTATION
 #include "STB/stb_image.h"
@@ -245,7 +246,7 @@ std::string prevfilename = "cube";
 
 void ImGuiImpl::UpdateGuiButtons(void)
 {
-#pragma region Model_Debug
+#pragma region Model
 
     char fileNameBuffer[140] = { '\0' };
     std::strcat(fileNameBuffer, filename.c_str());
@@ -274,37 +275,6 @@ void ImGuiImpl::UpdateGuiButtons(void)
     //std::vector<char const *> shadertypeStrings = {
     //  "Fragment Phong", "Vertex Phong", "Frag Blinn" };
     //ImGui::Combo("Light Model", &ShaderType, shadertypeStrings.data(), 3);
-
-
-
-    //if (ImGui::Button("Reload Shaders"))
-    //{
-    //  // we could implement reloading shaders here, but not necessary for
-    //  // assignment 1
-    //}
-
-    // TODO(student): implement GUI logic for enabling debug drawing modes
-
-    //std::vector<char const *> debugModeStrings = {
-    //  "No", "FaceNormal", "VertexNormal" };
-    //ImGui::Combo("Debug Mode", &debugMode, debugModeStrings.data(), 3);
-    //if (debugMode == 0)
-    //  g_GraphicsSys->DebugDraw(false);
-    //else
-    //  g_GraphicsSys->DebugDraw(true);
-
-    //if (debugMode == 1)
-    //  g_GraphicsSys->FaceNormalDraw(true);
-    //else
-    //  g_GraphicsSys->FaceNormalDraw(false);
-
-    //if (debugMode == 2)
-    //  g_GraphicsSys->VertexNormalDraw(true);
-    //else
-    //  g_GraphicsSys->VertexNormalDraw(false);
-
- 
-
 #pragma endregion
 
 #pragma region Camera
@@ -339,257 +309,7 @@ void ImGuiImpl::UpdateGuiButtons(void)
   }
 #pragma endregion
 
-#pragma region Material
-//  ImGui::Separator();
-//  {
-//    if (ImGui::CollapsingHeader("Material"))
-//    {
-//      // TODO: feel free to alter this code as you see fit; perhaps you wish to
-//      // change how materials are being handled; that's completely fine; this
-//      // is fully implemented just to demonstrate how to use ImGui, since none
-//      // of the other inputs are saved (minus the model file path input).
-//      //glm::vec3 tempamb;
-//      //glm::vec3 tempdiff;
-//      ImGui::ColorEdit3("Ambient", (float*)&MaterialVal.ambient);
-//      ImGui::ColorEdit3("Diffuse", (float*)&MaterialVal.diffuse);
-//      ImGui::ColorEdit3("Specular", (float*)&MaterialVal.specular);
-//      ImGui::ColorEdit3("Emisive", (float*)&MaterialVal.emisive);
-//      //   MaterialVal.ambient = glm::vec4(tempamb, 0.0f);
-//      // MaterialVal.diffuse = glm::vec4(tempdiff, 0.0f);;
-//    }
-//  }
-//#pragma endregion
 
-#pragma region Shinny
-  //ImGui::Separator();
-  //{
-  //  if (ImGui::CollapsingHeader("Shininess"))
-  //  {
-  //    // TODO: feel free to alter this code as you see fit; perhaps you wish to
-  //    // change how materials are being handled; that's completely fine; this
-  //    // is fully implemented just to demonstrate how to use ImGui, since none
-  //    // of the other inputs are saved (minus the model file path input).
-  //    //glm::vec3 tempamb;
-  //    //glm::vec3 tempdiff;
-  //    ImGui::SliderFloat("Shininess", &Shininess, 0.1f, 14.0f);
-  //    //   MaterialVal.ambient = glm::vec4(tempamb, 0.0f);
-  //    // MaterialVal.diffuse = glm::vec4(tempdiff, 0.0f);;
-  //  }
-  //}
-
-#pragma endregion
-
-#pragma region GlobalAmb
-  //ImGui::Separator();
-  //{
-  //  if (ImGui::CollapsingHeader("Global Ambient"))
-  //  {
-  //    // TODO: feel free to alter this code as you see fit; perhaps you wish to
-  //    // change how materials are being handled; that's completely fine; this
-  //    // is fully implemented just to demonstrate how to use ImGui, since none
-  //    // of the other inputs are saved (minus the model file path input).
-  //    //glm::vec3 tempamb;
-  //    //glm::vec3 tempdiff;
-  //    ImGui::ColorEdit3("Global Ambient Intensity",(float*) &GlobalAmbient);
-  //    //   MaterialVal.ambient = glm::vec4(tempamb, 0.0f);
-  //    // MaterialVal.diffuse = glm::vec4(tempdiff, 0.0f);;
-  //  }
-  //}
-
-#pragma endregion
-
-#pragma region Lights
-//  ImGui::Separator();
-//  {
-//    if (ImGui::CollapsingHeader("Lights"))
-//    {
-//
-//#pragma region New_Light
-//
-//      if (ImGui::Button("New Light") && LightNum < MAX_LIGHTS)
-//      {
-//        ++LightNum;
-//        Lighttype[LightNum - 1] = POINT;
-//
-//        glm::vec4 center = glm::vec4(ObjectManager::GetObjectList().at(0)->position.x, ObjectManager::GetObjectList().at(0)->position.y, ObjectManager::GetObjectList().at(0)->position.z, 1);
-//        float angle = 2 * PI / (float)LightNum;
-//        float radius = 2.0f;
-//        for (int i = 0; i < LightNum; ++i)
-//        {
-//          float rotate = i * angle;
-//          Lightposition[i].x = center.x + cos(rotate);
-//          Lightposition[i].z = center.z + sin(rotate);
-//          Lightposition[i].w = 1.0f;
-//        }
-//
-//        Lightposition[LightNum - 1].y = center.y;
-//
-//
-//        Lightdirection[LightNum - 1] = glm::linearRand(glm::vec4(-1), glm::vec4(1));
-//        Lightambient[LightNum - 1] = glm::linearRand(glm::vec4(0), glm::vec4(1));
-//        Lightdiffuse[LightNum - 1] = glm::linearRand(glm::vec4(0), glm::vec4(1));
-//        Lightspecular[LightNum - 1] = glm::linearRand(glm::vec4(0), glm::vec4(1));
-//        Lightinner[LightNum - 1] = 15.0f *2.0f * PI / 360.0f;
-//        Lightouter[LightNum - 1] = 30.0f *2.0f * PI / 360.0f;
-//        Lightfalloff[LightNum - 1] = 1.0f;
-//        glm::vec3 temppos = glm::vec3(Lightposition[LightNum - 1].x, Lightposition[LightNum - 1].y, Lightposition[LightNum - 1].z);
-//
-//        Object* obj = new Object(temppos, glm::vec3(0.25f));
-//        LightObjects.push_back(obj);
-//        for (int i = 0; i < LightNum; ++i)
-//        {
-//          LightObjects[i]->position = glm::vec3(Lightposition[i].x, Lightposition[i].y, Lightposition[i].z);
-//        }
-//
-//      }
-//
-//#pragma endregion
-//
-//#pragma region Remove_Light
-//
-//      if (ImGui::Button("Remove Light") && LightNum > 0)
-//      {
-//        Lighttype[LightNum - 1] = 0;
-//        Lightposition[LightNum - 1] = glm::vec4(0);
-//        Lightdirection[LightNum - 1] = glm::vec4(0);
-//        Lightambient[LightNum - 1] = glm::vec4(0);
-//        Lightdiffuse[LightNum - 1] = glm::vec4(0);
-//        Lightspecular[LightNum - 1] = glm::vec4(0);
-//        Lightinner[LightNum - 1] = 0.0f;
-//        Lightouter[LightNum - 1] = 0.0f;
-//        Lightfalloff[LightNum - 1] = 0.0f;
-//        LightObjects.pop_back();
-//
-//        --LightNum;
-//        glm::vec4 center = glm::vec4(ObjectManager::GetObjectList().at(0)->position.x, ObjectManager::GetObjectList().at(0)->position.y, ObjectManager::GetObjectList().at(0)->position.z, 1);
-//        float angle = 2 * PI / (float)LightNum;
-//        float radius = 2.0f;
-//        for (int i = 0; i < LightNum; ++i)
-//        {
-//          float rotate = i * angle;
-//          Lightposition[i].x = center.x + cos(rotate);
-//          Lightposition[i].z = center.z + sin(rotate);
-//          Lightposition[i].w = 1.0f;
-//        }
-//
-//        for (int i = 0; i < LightNum; ++i)
-//        {
-//          if (Lighttype[i] != DIRECTIONAL)
-//            LightObjects[i]->position = glm::vec3(Lightposition[i].x, Lightposition[i].y, Lightposition[i].z);
-//
-//          else
-//          {
-//            glm::vec4 temp = center - Lightdirection[i];
-//            LightObjects[i]->position = glm::vec3(temp.x, temp.y, temp.z);
-//          }
-//        }
-//
-//      }
-//
-//#pragma endregion
-//
-//
-//#pragma region PerLight_Settings
-//
-//
-//      std::string numb;
-//      std::string temp;
-//      for (int i = 0; i < LightNum; ++i)
-//      {
-//
-//        numb = std::to_string(i);
-//        temp = Lightstr + numb;
-//        ImGui::PushID(temp.c_str());
-//        if (ImGui::CollapsingHeader(temp.c_str()))
-//        {
-//          std::vector<char const *> lighttypes = {
-//            "Directional", "Spot", "Point" };
-//          ImGui::Combo("Debug Mode", &Lighttype[i], lighttypes.data(), 3);
-//          ImGui::SliderFloat3("Position", (float*)&Lightposition[i], -20.0f, 20.0f);
-//          ImGui::SliderFloat3("Direction", (float*)&Lightdirection[i], -20.0f, 20.0f);
-//
-//          if (Lighttype[i] != DIRECTIONAL)
-//            LightObjects[i]->position = glm::vec3(Lightposition[i].x, Lightposition[i].y, Lightposition[i].z);
-//
-//          else
-//          {
-//            glm::vec4 center = glm::vec4(ObjectManager::GetObjectList().at(0)->position.x, ObjectManager::GetObjectList().at(0)->position.y, ObjectManager::GetObjectList().at(0)->position.z, 1);
-//            glm::vec4 temp = center - Lightdirection[i];
-//            LightObjects[i]->position = glm::vec3(temp.x, temp.y, temp.z);
-//          }
-//
-//          ImGui::ColorEdit3("Ambient", (float*)&Lightambient[i]);
-//          ImGui::ColorEdit3("Diffuse", (float*)&Lightdiffuse[i]);
-//          ImGui::ColorEdit3("Specular", (float*)&Lightspecular[i]);
-//          ImGui::SliderFloat("Inner Angle", (float*)&Lightinner[i], 0.0f, Lightouter[i]);
-//          ImGui::SliderFloat("Outer Angle", (float*)&Lightouter[i], Lightinner[i], 40.0f * 2 * PI / 360.0f);
-//          ImGui::InputFloat("Falloff", &Lightfalloff[i]);
-//        }
-//        ImGui::PopID();
-//      }
-//
-//#pragma endregion
-//    }
-//  }
-
-#pragma endregion
-
-#pragma region Distance_Att
-  //ImGui::Separator();
-  //{
-  //  if (ImGui::CollapsingHeader("Distance Attenuation"))
-  //  {
-  //    std::vector<char const *> DistAttYesOrNo = {
-  //      "No", "Yes" };
-  //    ImGui::Combo("Distance Attenuation Enabled", &DistanceAtt, DistAttYesOrNo.data(), 2);
-  //    ImGui::SliderFloat("c1", &DistanceAttConstants[0], 0.0f, 1.0f);
-  //    ImGui::SliderFloat("c2", &DistanceAttConstants[1], 0.0f, 1.0f);
-  //    ImGui::SliderFloat("c3", &DistanceAttConstants[2], 0.0f, 1.0f);
-  //  }
-  //}
-#pragma endregion
-
-#pragma region Atmospheric_Att
-  //ImGui::Separator();
-  //{
-  //  if (ImGui::CollapsingHeader("Atmospheric Attenuation"))
-  //  {
-  //    std::vector<char const *> AtmosphericAttYesOrNo = {
-  //      "No", "Yes" };
-  //    ImGui::Combo("Atmospheric Attenuation Enabled", &AtmosphericAtt, AtmosphericAttYesOrNo.data(), 2);
-
-  //    ImGui::ColorEdit3("Fog Intensity", (float*)&AtmosphericIntensity);
-  //    ImGui::SliderFloat("Near Plane", &NearPlane, 0.0f, FarPlane);
-  //    ImGui::SliderFloat("FarPlane", &FarPlane, NearPlane, 100.0f);
-  //  }
-  //}
-#pragma endregion
-
-#pragma region RotateLights
-
-  //ImGui::Separator();
-  //{
-  //  if (ImGui::Button("Rotate Lights"))
-  //  {
-  //    if (!g_GraphicsSys->Get_Light_Rotation())
-  //    {
-  //      glm::vec4 center = glm::vec4(ObjectManager::GetObjectList().at(0)->position.x, ObjectManager::GetObjectList().at(0)->position.y, ObjectManager::GetObjectList().at(0)->position.z, 1);
-  //      float angle = 2 * PI / (float)LightNum;
-  //      float radius = 2.0f;
-  //      for (int i = 0; i < LightNum; ++i)
-  //      {
-  //        float rotate = i * angle;
-  //        Lightposition[i].x = center.x + cos(rotate);
-  //        Lightposition[i].z = center.z + sin(rotate);
-  //        Lightposition[i].w = 1.0f;
-  //        LightObjects[i]->position = glm::vec3(Lightposition[i].x, Lightposition[i].y, Lightposition[i].z);
-  //      }
-  //    }
-  //    g_GraphicsSys->Light_Rotation();
-  //  }
-  //}
-
-#pragma endregion
 
   ImGui::Separator();
   {
@@ -599,21 +319,56 @@ void ImGuiImpl::UpdateGuiButtons(void)
     }
   }
 
-#pragma region Text
+  ImGui::Separator();
+  {
+    if (ImGui::CollapsingHeader("Note"))
+    {
+      ImGui::PushID("Notes");
 
-  //ImGui::Separator();
-  //{
-  //  if (ImGui::Button("Textures"))
-  //  {
-  //    if (Textures == 0)
-  //      Textures = 1;
+      if (ImGui::Button("Play"))
+      {
 
-  //    else
-  //      Textures = 0;
-  //  }
-  //}
+      }
 
-#pragma endregion
+      if (ImGui::Button("Stop"))
+      {
+
+      }
+
+      if (ImGui::Button("Pause"))
+      {
+
+      }
+
+      if (ImGui::Button("Reset Default"))
+      {
+         
+      }
+
+      ImGui::SliderFloat("Soft | Loud", GetSoftness(), 0, 1);
+      ImGui::SliderInt("Major | Minor", GetMajor(), 0, 1);
+      ImGui::SliderFloat("Staccato | Legato", GetStaccato(), 0, 1);
+      ImGui::SliderInt("Phrase Length", GetPhraseLength(), 4, 16);
+
+      std::vector<char const *> Voices = {
+        "None", "Bass", "Tenor", "Alto", "Soprano"};
+      ImGui::Combo("Voice Melody", GetVoiceMelody(), Voices.data(), 5);
+
+      std::vector<char const *> Time = {
+        "3/4", "4/4", "6/8"};
+      ImGui::Combo("Time Signature", GetTimeSignature(), Time.data(), 3);
+
+      ImGui::SliderInt("BPM", GetBPM(), 40, 208); 
+
+      if (ImGui::CollapsingHeader("Emotion"))
+      {
+        ImGui::SliderFloat("Happy | Sad", GetHappiness(), 0, 1);
+        ImGui::SliderFloat("Peaceful | Angry", GetPeacefulness(), 0, 1);
+        ImGui::SliderFloat("Light-Hearted | Heavy", GetHeartness(), 0, 1);
+        ImGui::SliderFloat("Relaxed | Frantic", GetRelax(), 0, 1);
+      }
+    }
+  }
 
 }
 
