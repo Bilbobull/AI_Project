@@ -1,17 +1,29 @@
+#pragma once
 #include "Graphics\Context.h"
 #include "Graphics\GraphicsSystem.h"
 #include "Input\InputSystem.h"
+#include "Sound\SoundSystem.h"
+#include "Sound\BPM.h"
+#include "Sound\CounterPointSystem.h"
 #include "Systems.h"
+
 
 extern std::vector <System*> Systems;
 extern bool Running;
 
+
 int main(int argc, char* argv[])
 {
   Running = true;
+	
+	SoundSystem mSoundSystem;
+	mSoundSystem.Init();
 
   Systems.push_back(new GraphicsSystem());
   Systems.push_back(new InputSystem());
+	Systems.push_back(new BPM());
+	Systems.push_back(new CounterPoint());
+
 
 
   for (auto it : Systems)
@@ -21,7 +33,14 @@ int main(int argc, char* argv[])
   {
     for (auto it : Systems)
       it->Update(0);
+
+		mSoundSystem.Update();
   }
+
+	for (auto it : Systems)
+		it->Free();
+
+	mSoundSystem.Free();
 
   return 0;
 }

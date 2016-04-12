@@ -39,8 +39,11 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>$(ProjectDir)/External_Dependency/include;$(IncludePath)</IncludePath>
+    <IncludePath>$(ProjectDir)/External_Dependency/include/FMOD;$(ProjectDir)/External_Dependency/include;$(IncludePath)</IncludePath>
     <LibraryPath>$(ProjectDir)\External_Dependency\lib\x86;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -48,10 +51,11 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>ImGuid.lib;STB.lib;opengl32.lib;glew32.lib;glew32s.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>ImGuid.lib;STB.lib;opengl32.lib;glew32.lib;glew32s.lib;glfw3.lib;fmodexl_vc.lib;fmodex_vc.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <SubSystem>Console</SubSystem>
       <AdditionalOptions>/ignore:4099 %(AdditionalOptions)</AdditionalOptions>
       <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
@@ -70,7 +74,8 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>ImGui.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>ImGui.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;fmodex_vc.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Users\LightningFst\Documents\School\CS380\Research Project\AI_Project\Graphics_Engine\External_Dependency\lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -101,11 +106,15 @@
     <ClCompile Include="Systems\main.cpp" />
     <ClCompile Include="Systems\Sound\BPM.cpp" />
     <ClCompile Include="Systems\Sound\CounterPointSystem.cpp" />
+    <ClCompile Include="Systems\Sound\NoteDuration.cpp" />
+    <ClCompile Include="Systems\Sound\SoundEffectComponent.cpp" />
+    <ClCompile Include="Systems\Sound\SoundSystem.cpp" />
+    <ClCompile Include="Systems\Sound\SoundTrackComponent.cpp" />
+    <ClCompile Include="Systems\Sound\TimeSignature.cpp" />
     <ClCompile Include="Systems\Sound\Variables.cpp" />
     <ClCompile Include="Systems\Systems.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="stb_image.h" />
     <ClInclude Include="Systems\Editor\Editor.h" />
     <ClInclude Include="Systems\Graphics\Buffer_Manager.h" />
     <ClInclude Include="Systems\Graphics\Camera.h" />
@@ -136,7 +145,12 @@
     <ClInclude Include="Systems\Sound\BPM.h" />
     <ClInclude Include="Systems\Sound\CounterPointSystem.h" />
     <ClInclude Include="Systems\Sound\KeyScales.h" />
+    <ClInclude Include="Systems\Sound\NoteDuration.h" />
     <ClInclude Include="Systems\Sound\NoteFrequency.h" />
+    <ClInclude Include="Systems\Sound\SoundEffectComponent.h" />
+    <ClInclude Include="Systems\Sound\SoundSystem.h" />
+    <ClInclude Include="Systems\Sound\SoundTrackComponent.h" />
+    <ClInclude Include="Systems\Sound\TimeSignature.h" />
     <ClInclude Include="Systems\Sound\Variables.h" />
     <ClInclude Include="Systems\Sound\VoiceEnums.h" />
     <ClInclude Include="Systems\Sound\Voices.h" />

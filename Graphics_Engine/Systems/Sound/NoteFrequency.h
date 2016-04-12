@@ -1,11 +1,12 @@
 #pragma once
+#include <vector>
 
 typedef float Note;
+typedef std::vector<Note> NoteIndex;
 
-
-static Note F2 = 87.31;
+static Note F2 = 87.31f;
 static Note F2f = 92.50f;
-static Note F2b = 82.41;
+static Note F2b = 82.41f;
 static Note G2 = 98.00f;
 static Note G2f = 103.83f;
 static Note G2b = F2f;
@@ -13,7 +14,7 @@ static Note A2 = 110.00f;
 static Note A2f = 116.54f;
 static Note A2b = G2f;
 static Note B2 = 123.47f;
-static Note B2f = 130.81;
+static Note B2f = 130.81f;
 static Note B2b = A2f;
 static Note C3 = 130.81f;
 static Note C3f = 138.59f;

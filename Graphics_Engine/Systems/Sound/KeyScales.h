@@ -37,3 +37,10 @@ static MinorScale Fminor  = Abmajor;
 static MinorScale Ffminor = Amajor;
 static MinorScale Gminor  = Bmajor;
 static MinorScale Gbminor = Bbmajor;
+
+static int GetDistanceBetweenNotes(std::vector<Note>& scale, Note a1, Note a2) {
+	auto it1 = std::find(scale.begin(), scale.end(), a1);
+	auto it2 = std::find(scale.begin(), scale.end(), a2);
+
+	return std::distance(it1, it2);
+}

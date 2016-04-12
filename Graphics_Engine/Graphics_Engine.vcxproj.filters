@@ -154,6 +154,21 @@
     <ClCompile Include="Systems\Sound\Variables.cpp">
       <Filter>Systems\Sound</Filter>
     </ClCompile>
+    <ClCompile Include="Systems\Sound\TimeSignature.cpp">
+      <Filter>Systems\Sound</Filter>
+    </ClCompile>
+    <ClCompile Include="Systems\Sound\NoteDuration.cpp">
+      <Filter>Systems\Sound</Filter>
+    </ClCompile>
+    <ClCompile Include="Systems\Sound\SoundEffectComponent.cpp">
+      <Filter>Systems\Sound</Filter>
+    </ClCompile>
+    <ClCompile Include="Systems\Sound\SoundSystem.cpp">
+      <Filter>Systems\Sound</Filter>
+    </ClCompile>
+    <ClCompile Include="Systems\Sound\SoundTrackComponent.cpp">
+      <Filter>Systems\Sound</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Systems\Graphics\Graphics_Headers.h">
@@ -203,9 +218,6 @@
     </ClInclude>
     <ClInclude Include="Systems\Graphics\OBJLoader.h">
       <Filter>Systems\Graphics\Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="stb_image.h">
-      <Filter>Source Files</Filter>
     </ClInclude>
     <ClInclude Include="Systems\Graphics\Texture.h">
       <Filter>Systems\Graphics\Headers</Filter>
@@ -265,6 +277,21 @@
       <Filter>Systems\Sound</Filter>
     </ClInclude>
     <ClInclude Include="Systems\Sound\Variables.h">
+      <Filter>Systems\Sound</Filter>
+    </ClInclude>
+    <ClInclude Include="Systems\Sound\TimeSignature.h">
+      <Filter>Systems\Sound</Filter>
+    </ClInclude>
+    <ClInclude Include="Systems\Sound\NoteDuration.h">
+      <Filter>Systems\Sound</Filter>
+    </ClInclude>
+    <ClInclude Include="Systems\Sound\SoundTrackComponent.h">
+      <Filter>Systems\Sound</Filter>
+    </ClInclude>
+    <ClInclude Include="Systems\Sound\SoundEffectComponent.h">
+      <Filter>Systems\Sound</Filter>
+    </ClInclude>
+    <ClInclude Include="Systems\Sound\SoundSystem.h">
       <Filter>Systems\Sound</Filter>
     </ClInclude>
   </ItemGroup>
