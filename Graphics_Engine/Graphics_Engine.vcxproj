@@ -39,7 +39,7 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>$(ProjectDir)/External_Dependency/include/FMOD;$(ProjectDir)/External_Dependency/include;$(IncludePath)</IncludePath>
+    <IncludePath>$(ProjectDir)/External_Dependency/include;$(IncludePath)</IncludePath>
     <LibraryPath>$(ProjectDir)\External_Dependency\lib\x86;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">

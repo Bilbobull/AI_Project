@@ -1,10 +1,43 @@
-﻿Build started 09/04/2016 14:58:26.
+﻿Build started 12/04/2016 1:00:51.
      1>Project "C:\Users\Gonzalo\Desktop\AI_Project\Graphics_Engine\Graphics_Engine.vcxproj" on node 2 (Build target(s)).
      1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(381,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (My_Project.vcxproj).  This can lead to incorrect clean and rebuild behavior.
-     1>Link:
-         Graphics_Engine.vcxproj -> C:\Users\Gonzalo\Desktop\AI_Project\Debug\Graphics_Engine.exe
-     1>Done Building Project "C:\Users\Gonzalo\Desktop\AI_Project\Graphics_Engine\Graphics_Engine.vcxproj" (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _CRT_SECURE_NO_WARNINGS /D _MBCS /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Systems\Sound\CounterPointSystem.cpp Systems\Sound\SoundEffectComponent.cpp Systems\Sound\SoundSystem.cpp Systems\Sound\SoundTrackComponent.cpp Systems\main.cpp
+         main.cpp
+     1>c:\users\gonzalo\desktop\ai_project\graphics_engine\systems\sound\soundsystem.h(112): error C2146: syntax error : missing ';' before identifier 'caps'
+     1>c:\users\gonzalo\desktop\ai_project\graphics_engine\systems\sound\soundsystem.h(112): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+         SoundTrackComponent.cpp
+     1>c:\users\gonzalo\desktop\ai_project\graphics_engine\systems\sound\soundsystem.h(112): error C2146: syntax error : missing ';' before identifier 'caps'
+     1>c:\users\gonzalo\desktop\ai_project\graphics_engine\systems\sound\soundsystem.h(112): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+         SoundSystem.cpp
+     1>c:\users\gonzalo\desktop\ai_project\graphics_engine\systems\sound\soundsystem.h(112): error C2146: syntax error : missing ';' before identifier 'caps'
+     1>c:\users\gonzalo\desktop\ai_project\graphics_engine\systems\sound\soundsystem.h(112): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\users\gonzalo\desktop\ai_project\graphics_engine\systems\sound\soundsystem.cpp(96): error C2039: 'getDriverCaps' : is not a member of 'FMOD::System'
+                 c:\users\gonzalo\desktop\ai_project\graphics_engine\external_dependency\include\fmod\fmod.hpp(52) : see declaration of 'FMOD::System'
+     1>c:\users\gonzalo\desktop\ai_project\graphics_engine\systems\sound\soundsystem.cpp(96): error C2065: 'caps' : undeclared identifier
+     1>c:\users\gonzalo\desktop\ai_project\graphics_engine\systems\sound\soundsystem.cpp(101): error C2039: 'setSpeakerMode' : is not a member of 'FMOD::System'
+                 c:\users\gonzalo\desktop\ai_project\graphics_engine\external_dependency\include\fmod\fmod.hpp(52) : see declaration of 'FMOD::System'
+     1>c:\users\gonzalo\desktop\ai_project\graphics_engine\systems\sound\soundsystem.cpp(104): error C2065: 'caps' : undeclared identifier
+     1>c:\users\gonzalo\desktop\ai_project\graphics_engine\systems\sound\soundsystem.cpp(104): error C2065: 'FMOD_CAPS_HARDWARE_EMULATED' : undeclared identifier
+     1>c:\users\gonzalo\desktop\ai_project\graphics_engine\systems\sound\soundsystem.cpp(114): error C2660: 'FMOD::System::getDriverInfo' : function does not take 4 arguments
+     1>c:\users\gonzalo\desktop\ai_project\graphics_engine\systems\sound\soundsystem.cpp(123): error C2660: 'FMOD::System::setSoftwareFormat' : function does not take 5 arguments
+     1>c:\users\gonzalo\desktop\ai_project\graphics_engine\systems\sound\soundsystem.cpp(138): error C2039: 'setSpeakerMode' : is not a member of 'FMOD::System'
+                 c:\users\gonzalo\desktop\ai_project\graphics_engine\external_dependency\include\fmod\fmod.hpp(52) : see declaration of 'FMOD::System'
+     1>c:\users\gonzalo\desktop\ai_project\graphics_engine\systems\sound\soundsystem.cpp(317): error C2065: 'FMOD_SOFTWARE' : undeclared identifier
+     1>c:\users\gonzalo\desktop\ai_project\graphics_engine\systems\sound\soundsystem.cpp(317): error C2660: 'FMOD::System::createSound' : function does not take 3 arguments
+     1>c:\users\gonzalo\desktop\ai_project\graphics_engine\systems\sound\soundsystem.cpp(327): error C2065: 'FMOD_SOFTWARE' : undeclared identifier
+     1>c:\users\gonzalo\desktop\ai_project\graphics_engine\systems\sound\soundsystem.cpp(327): error C2660: 'FMOD::System::createStream' : function does not take 3 arguments
+     1>c:\users\gonzalo\desktop\ai_project\graphics_engine\systems\sound\soundsystem.cpp(340): error C2065: 'FMOD_CHANNEL_FREE' : undeclared identifier
+     1>c:\users\gonzalo\desktop\ai_project\graphics_engine\systems\sound\soundsystem.cpp(345): error C2065: 'FMOD_CHANNEL_FREE' : undeclared identifier
+         SoundEffectComponent.cpp
+     1>c:\users\gonzalo\desktop\ai_project\graphics_engine\systems\sound\soundsystem.h(112): error C2146: syntax error : missing ';' before identifier 'caps'
+     1>c:\users\gonzalo\desktop\ai_project\graphics_engine\systems\sound\soundsystem.h(112): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+         CounterPointSystem.cpp
+     1>c:\users\gonzalo\desktop\ai_project\graphics_engine\systems\sound\soundsystem.h(112): error C2146: syntax error : missing ';' before identifier 'caps'
+     1>c:\users\gonzalo\desktop\ai_project\graphics_engine\systems\sound\soundsystem.h(112): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+         Generating Code...
+     1>Done Building Project "C:\Users\Gonzalo\Desktop\AI_Project\Graphics_Engine\Graphics_Engine.vcxproj" (Build target(s)) -- FAILED.
 
-Build succeeded.
+Build FAILED.
 
-Time Elapsed 00:00:00.04
+Time Elapsed 00:00:01.32
