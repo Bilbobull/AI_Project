@@ -327,38 +327,51 @@ void ImGuiImpl::UpdateGuiButtons(void)
 
       if (ImGui::Button("Play"))
       {
-
+        Music_State = PLAY;
       }
 
       if (ImGui::Button("Stop"))
       {
-
+        Music_State = STOP;
       }
 
       if (ImGui::Button("Pause"))
       {
-
+        Music_State = PAUSE;
       }
 
       if (ImGui::Button("Reset Default"))
       {
-         
+        shoft_loud = 0.5f;
+        major_minor = 0;
+        staccato_legato = 0.5f;
+        phrase_length = 12;
+        voice_melody = 0;
+        time_signature = 1;
+        bpm = 80;
+        happiness = 0.5f;
+        peacefulness = 0.5f;
+        heart = 0.5f;
+        relax = 0.5f;
       }
 
-      ImGui::SliderFloat("Soft | Loud", GetSoftness(), 0, 1);
-      ImGui::SliderInt("Major | Minor", GetMajor(), 0, 1);
-      ImGui::SliderFloat("Staccato | Legato", GetStaccato(), 0, 1);
-      ImGui::SliderInt("Phrase Length", GetPhraseLength(), 4, 16);
+      if (ImGui::CollapsingHeader("Constraints"))
+      {
+        ImGui::SliderFloat("Soft | Loud", GetSoftness(), 0, 1);
+        ImGui::SliderInt("Major | Minor", GetMajor(), 0, 1);
+        ImGui::SliderFloat("Staccato | Legato", GetStaccato(), 0, 1);
+        ImGui::SliderInt("Phrase Length", GetPhraseLength(), 4, 16);
 
-      std::vector<char const *> Voices = {
-        "None", "Bass", "Tenor", "Alto", "Soprano"};
-      ImGui::Combo("Voice Melody", GetVoiceMelody(), Voices.data(), 5);
+        std::vector<char const *> Voices = {
+          "None", "Bass", "Tenor", "Alto", "Soprano" };
+        ImGui::Combo("Voice Melody", GetVoiceMelody(), Voices.data(), 5);
 
-      std::vector<char const *> Time = {
-        "3/4", "4/4", "6/8"};
-      ImGui::Combo("Time Signature", GetTimeSignature(), Time.data(), 3);
+        std::vector<char const *> Time = {
+          "3/4", "4/4", "6/8" };
+        ImGui::Combo("Time Signature", GetTimeSignature(), Time.data(), 3);
 
-      ImGui::SliderInt("BPM", GetBPM(), 40, 208); 
+        ImGui::SliderInt("BPM", GetBPM(), 40, 208);
+      }
 
       if (ImGui::CollapsingHeader("Emotion"))
       {

@@ -1,23 +1,32 @@
-extern float shoft_loud;
-extern int major_minor;
-extern float staccato_legato;
-extern int phrase_length;
-extern int voice_melody;
-extern int time_signature;
-extern int BPM;
-extern float happiness;
-extern float peacefulness;
-extern float heart;
-extern float relax;
+enum States
+{
+  PLAY,
+  PAUSE,
+  STOP
+};
 
-extern float* GetSoftness();
-extern int* GetMajor();
-extern float* GetStaccato();
-extern int* GetPhraseLength();
-extern int* GetVoiceMelody();
-extern int* GetTimeSignature();
-extern int* GetBPM();
-extern float* GetHappiness();
-extern float* GetPeacefulness();
-extern float* GetHeartness();
-extern float* GetRelax();
+States Music_State = PAUSE;
+
+float shoft_loud = 0.5f;
+int major_minor = 0;
+float staccato_legato = 0.5f;
+int phrase_length = 12;
+int voice_melody = 0;
+int time_signature = 1;
+int bpm = 80;
+float happiness = 0.5f;
+float peacefulness = 0.5f;
+float heart = 0.5f;
+float relax = 0.5f;
+
+float* GetSoftness() { return &shoft_loud; }
+int* GetMajor() { return &major_minor; }
+float* GetStaccato() { return &staccato_legato; }
+int* GetPhraseLength() { return &phrase_length; }
+int* GetVoiceMelody() { return &voice_melody; }
+int* GetTimeSignature() { return &time_signature; }
+int* GetBPM() { return &bpm; }
+float* GetHappiness() { return &happiness; }
+float* GetPeacefulness() { return &peacefulness; }
+float* GetHeartness() { return &heart; }
+float* GetRelax() { return &relax; }
