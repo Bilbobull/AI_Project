@@ -160,13 +160,7 @@
     <ClCompile Include="Systems\Sound\NoteDuration.cpp">
       <Filter>Systems\Sound</Filter>
     </ClCompile>
-    <ClCompile Include="Systems\Sound\SoundEffectComponent.cpp">
-      <Filter>Systems\Sound</Filter>
-    </ClCompile>
-    <ClCompile Include="Systems\Sound\SoundSystem.cpp">
-      <Filter>Systems\Sound</Filter>
-    </ClCompile>
-    <ClCompile Include="Systems\Sound\SoundTrackComponent.cpp">
+    <ClCompile Include="Systems\Sound\AudioSystem.cpp">
       <Filter>Systems\Sound</Filter>
     </ClCompile>
   </ItemGroup>
@@ -285,13 +279,10 @@
     <ClInclude Include="Systems\Sound\NoteDuration.h">
       <Filter>Systems\Sound</Filter>
     </ClInclude>
-    <ClInclude Include="Systems\Sound\SoundTrackComponent.h">
+    <ClInclude Include="Systems\Sound\AudioSystem.hpp">
       <Filter>Systems\Sound</Filter>
     </ClInclude>
-    <ClInclude Include="Systems\Sound\SoundEffectComponent.h">
-      <Filter>Systems\Sound</Filter>
-    </ClInclude>
-    <ClInclude Include="Systems\Sound\SoundSystem.h">
+    <ClInclude Include="Systems\Sound\SoundInfo.hpp">
       <Filter>Systems\Sound</Filter>
     </ClInclude>
   </ItemGroup>

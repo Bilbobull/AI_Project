@@ -1,6 +1,6 @@
 #include "CounterPointSystem.h"
 #include "KeyScales.h"
-#include "SoundSystem.h"
+#include "AudioSystem.hpp"
 
 CounterPoint::CounterPoint() {
 

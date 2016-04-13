@@ -2,7 +2,7 @@
 #include "Graphics\Context.h"
 #include "Graphics\GraphicsSystem.h"
 #include "Input\InputSystem.h"
-#include "Sound\SoundSystem.h"
+#include "Sound\AudioSystem.hpp"
 #include "Sound\BPM.h"
 #include "Sound\CounterPointSystem.h"
 #include "Systems.h"
@@ -16,8 +16,8 @@ int main(int argc, char* argv[])
 {
   Running = true;
 	
-	SoundSystem mSoundSystem;
-	mSoundSystem.Init();
+	//SoundSystem mSoundSystem;
+	//mSoundSystem.Init();
 
   Systems.push_back(new GraphicsSystem());
   Systems.push_back(new InputSystem());
@@ -34,13 +34,13 @@ int main(int argc, char* argv[])
     for (auto it : Systems)
       it->Update(0);
 
-		mSoundSystem.Update();
+		/*mSoundSystem.Update();*/
   }
 
 	for (auto it : Systems)
 		it->Free();
 
-	mSoundSystem.Free();
+	/*mSoundSystem.Free();*/
 
   return 0;
 }

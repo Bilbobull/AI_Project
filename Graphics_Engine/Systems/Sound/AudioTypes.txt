@@ -1,0 +1,53 @@
+#pragma once
+
+//#define SFX_AMOUNT 2 // make sure I match how many sound effects are in the SFXType 
+
+///// DEPRECATED /////
+
+//EXAMPLE USE:
+// audioSystemPtr->PlaySound(SFX::PLAYER_PAIN);
+
+// Identify sound effects
+namespace SFX
+{
+  enum SFXType
+  {
+    PLAYER_PAIN,
+    PLAYER_DEATH,
+    PLAYER_CONNECT,
+
+    GENERIC_HIT,
+
+    STAFF_HIT,
+    STAFF_MISS,
+
+    AXE_MISS,
+    AXE_HIT,
+
+	MAGIC_CAST,
+	MAGIC_HIT,
+
+    //MENU_MOVE,
+    //MENU_BACK,
+    //MENU_SELECT,
+
+    // new enums stay above me
+    NONE
+  };
+}
+
+
+namespace Music
+{
+  enum MusicType
+  {
+    CANCEL,
+    AMBIENT,
+    THEME_1, // First level
+	THEME_2, // Second level
+	THEME_3, // Third level
+    // new enums stay above me
+    NONE
+  };
+}
+
