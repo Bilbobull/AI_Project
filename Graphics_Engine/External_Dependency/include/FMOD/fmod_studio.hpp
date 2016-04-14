@@ -12,7 +12,7 @@
 #include "fmod_studio.h"
 
 //#include "fmod.hpp"
-#include "../../lowlevel/inc/fmod.hpp"
+#include "FMOD/fmod.hpp"
 
 namespace FMOD
 {

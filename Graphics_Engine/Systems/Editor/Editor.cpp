@@ -1,3 +1,4 @@
+#pragma once
 #include "Editor.h"
 #include "../Graphics/Graphics_Headers.h"
 #include "../Graphics/Math_Headers.h"

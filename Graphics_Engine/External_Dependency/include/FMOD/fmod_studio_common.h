@@ -9,7 +9,7 @@
 #define FMOD_STUDIO_COMMON_H
 
 //#include "fmod.h"
-#include"../../lowlevel/inc/fmod.h"
+#include"FMOD/fmod.h"
 
 typedef unsigned int FMOD_STUDIO_INITFLAGS;
 
