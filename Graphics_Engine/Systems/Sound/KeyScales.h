@@ -1,6 +1,7 @@
 #pragma once
 
 #include <vector>
+#include <deque>
 #include "NoteFrequency.h"
 
 typedef std::vector<Note> MajorScale;
@@ -39,8 +40,47 @@ static MinorScale Gminor  = Bmajor;
 static MinorScale Gbminor = Bbmajor;
 
 static int GetDistanceBetweenNotes(std::vector<Note>& scale, Note a1, Note a2) {
+	// Make a1 the lowest
+	if (a1 > a2) {
+		auto a3 = a2;
+		a2 = a1;
+		a1 = a3;
+	}
+	
 	auto it1 = std::find(scale.begin(), scale.end(), a1);
 	auto it2 = std::find(scale.begin(), scale.end(), a2);
 
+	_ASSERT(it1 != scale.end());
+	_ASSERT(it2 != scale.end());
+
 	return std::distance(it1, it2);
+}
+
+static std::deque<Note> GetNotesBetweenVoices(std::vector<Note>& scale, Note a1, Note a2) {
+	std::deque<Note> list;
+
+	// Make a1 the lowest
+	if (a1 > a2) {
+		auto a3 = a2;
+		a2 = a1;
+		a1 = a3;
+	}
+
+	auto it1 = std::find(scale.begin(), scale.end(), a1);
+	auto it2 = std::find(scale.begin(), scale.end(), a2);
+
+	_ASSERT(it1 != scale.end());
+	_ASSERT(it2 != scale.end());
+
+	if (it1 == it2) {
+		return list;
+	}
+
+	// Add all notes in range to the list
+	while (it1 < it2) {
+		list.push_back(*it1);
+		++it1;
+	}
+
+	return list;
 }

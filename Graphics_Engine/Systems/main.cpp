@@ -21,10 +21,8 @@ int main(int argc, char* argv[])
 
   Systems.push_back(new GraphicsSystem());
   Systems.push_back(new InputSystem());
-	Systems.push_back(new BPM());
 	Systems.push_back(new CounterPoint());
-
-
+	Systems.push_back(new AudioSystem());
 
   for (auto it : Systems)
     it->Init();

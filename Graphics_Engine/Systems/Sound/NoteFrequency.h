@@ -2,8 +2,8 @@
 #include <vector>
 
 typedef float Note;
-typedef std::vector<Note> NoteIndex;
 
+static Note Rest = 0.0f;
 static Note F2 = 87.31f;
 static Note F2f = 92.50f;
 static Note F2b = 82.41f;

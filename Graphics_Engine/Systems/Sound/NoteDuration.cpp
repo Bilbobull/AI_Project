@@ -1,3 +1,4 @@
+#pragma once
 #include "NoteDuration.h"
 #include "BPM.h"
 
@@ -44,4 +45,49 @@ double NoteDuration::getWholeNote() {
 
 void NoteDuration::resetDurations(double newBeat_dt) {
 	mBeat_dt = newBeat_dt;
+}
+
+double NoteDuration::chooseDuration(NoteType duration) {
+	switch (duration) {
+	case SixtyFourthNote :
+			return get64thNote();
+		break;
+
+		case 	ThirtySecondNote :
+			return get32ndNote();
+		break;
+
+		case SixteenthNote :
+			return get16thNote();
+		break;
+
+		case EigthNote :
+			return get8thNote();
+		break;
+
+		case QuarterNote :
+			return getQuarterNote();
+		break;
+
+		case DottedQuarterNote :
+			return getDottedQuarterNote();
+		break;
+
+		case HalfNote :
+			return getHalfNote();
+		break;
+
+		case DottedHalfNote :
+			return getDottedHalfNote();
+		break;
+
+		case WholeNote :
+			return getWholeNote();
+		break;
+
+		// Should never hit this
+		default:
+			return 0.0;
+			break;
+	}
 }

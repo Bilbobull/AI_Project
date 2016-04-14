@@ -1,9 +1,27 @@
 #pragma once
 
+enum NoteType {
+	SixtyFourthNote,
+	ThirtySecondNote,
+	SixteenthNote,
+	EigthNote,
+	QuarterNote,
+	DottedQuarterNote,
+	HalfNote,
+	DottedHalfNote,
+	WholeNote,
+	END_LIST
+};
+
 class NoteDuration {
 	public:
 		NoteDuration(){};
 		NoteDuration(double beat_dt);
+
+		void resetDurations(double newBeat_dt);
+		double chooseDuration(NoteType duration);
+
+	private:
 		double get64thNote();
 		double get32ndNote();
 		double get16thNote();
@@ -14,9 +32,5 @@ class NoteDuration {
 		double getDottedQuarterNote();
 		double getDottedHalfNote();
 
-
-		void resetDurations(double newBeat_dt);
-
-	private:
 		double mBeat_dt;		
 };

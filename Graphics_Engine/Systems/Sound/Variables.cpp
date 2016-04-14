@@ -1,3 +1,4 @@
+#pragma once
 #include "Variables.h"
 
 float shoft_loud = 0.5f;
